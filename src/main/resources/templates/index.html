@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Homepage</title>
+</head>
+<body>
+    <h1>-----Benvenuto nella Home page-----</h1>
+
+    <h2>Lista Manga</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Prezzo</th>
+            <th>Azioni</th>
+        </tr>
+        <tr th:each="manga : ${listaManga}">
+            <td th:text="${manga.id}"></td>
+            <td th:text="${manga.nome}"></td>
+            <td th:text="${manga.prezzo}"></td>
+            <td>
+                <a th:href="@{'/aggiornaManga/' + ${manga.id}}">Modifica</a> |
+                <a th:href="@{'/eliminaManga/' + ${manga.id}}">Elimina</a>
+            </td>
+        </tr>
+    </table>
+    <a th:href="@{/mangaForm}">Aggiungi Manga</a>
+
+    <h2>Lista Fumetterie</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Città</th>
+            <th>Azioni</th>
+        </tr>
+        <tr th:each="f : ${listaFumetterie}">
+            <td th:text="${f.id}"></td>
+            <td th:text="${f.nome}"></td>
+            <td th:text="${f.citta}"></td>
+            <td>
+                <a th:href="@{'/aggiornaFumetteria/' + ${f.id}}">Modifica</a> |
+                <a th:href="@{'/eliminaFumetteria/' + ${f.id}}">Elimina</a>
+            </td>
+        </tr>
+    </table>
+    <a th:href="@{/fumetteriaForm}">Aggiungi Fumetteria</a>
+</body>
+</html>

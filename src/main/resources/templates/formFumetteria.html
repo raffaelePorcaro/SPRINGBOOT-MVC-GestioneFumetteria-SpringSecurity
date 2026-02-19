@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Form Fumetteria</title>
+</head>
+<body>
+    <h1>Aggiungi/Modifica Fumetteria</h1>
+    <form th:action="@{/fumetteriaSalvata}" th:object="${fumetteria}" method="post">
+        <label>Nome:</label>
+        <input type="text" th:field="*{nome}" required/><br>
+        <label>Città:</label>
+        <input type="text" th:field="*{citta}" required/><br>
+        <button type="submit">Salva</button>
+    </form>
+    <a th:href="@{/}">Torna alla homepage</a>
+</body>
+</html>

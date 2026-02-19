@@ -1,0 +1,9 @@
+<h1>Modifica Manga</h1>
+<form th:action="@{/mangaSalvato}" th:object="${manga}" method="post">
+    <input type="hidden" th:field="*{id}" /> 
+    <label>Nome:</label>
+    <input type="text" th:field="*{nome}" required/><br>
+    <label>Prezzo:</label>
+    <input type="number" th:field="*{prezzo}" required/><br>
+    <button type="submit">Salva modifiche</button>
+</form>

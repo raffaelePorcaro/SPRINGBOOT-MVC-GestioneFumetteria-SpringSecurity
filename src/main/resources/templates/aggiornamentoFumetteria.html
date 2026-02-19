@@ -1,0 +1,9 @@
+<h1>Modifica Fumetteria</h1>
+<form th:action="@{/fumetteriaSalvata}" th:object="${fumetteria}" method="post">
+    <input type="hidden" th:field="*{id}" /> 
+    <label>Nome:</label>
+    <input type="text" th:field="*{nome}" required/><br>
+    <label>Città:</label>
+    <input type="text" th:field="*{citta}" required/><br>
+    <button type="submit">Salva modifiche</button>
+</form>
