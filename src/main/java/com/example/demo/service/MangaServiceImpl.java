@@ -43,8 +43,8 @@ public class MangaServiceImpl implements InterfacciaService<Manga>{
 	
 	
 	public Manga findByNome(String nome) {
-		Manga libro = mangaRepository.findByNome(nome);
-		return libro;
+		Manga manga = mangaRepository.findByNome(nome);
+		return manga;
 	}
 	
 }
