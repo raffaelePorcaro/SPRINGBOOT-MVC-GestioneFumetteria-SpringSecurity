@@ -24,11 +24,7 @@ public class LoadDataBase {
 	                Fumetteria fumetteria2 = fumetteriaRepository.save(new Fumetteria("Manga Mania", "Milano"));
 	                Fumetteria fumetteria3 = fumetteriaRepository.save(new Fumetteria("Otaku Shop", "Torino"));
 	                
-	                //salvo prima le fumetterie per poi salvare i manga sennò da errore
-	                fumetteriaRepository.save(fumetteria1);
-	                fumetteriaRepository.save(fumetteria2);
-	                fumetteriaRepository.save(fumetteria3);
-	               
+	                
 	                log.info("Fumetterie caricate: " + fumetteria1 + ", " + fumetteria2 + ", " + fumetteria3);
 
 	                Manga manga1 = new Manga("One Piece", 7, List.of(fumetteria1, fumetteria2));
@@ -38,7 +34,10 @@ public class LoadDataBase {
 	                mangaRepository.save(manga1);
 	                mangaRepository.save(manga2);
 	                mangaRepository.save(manga3);
+	                
+	                log.info("manga caricati: " + manga1 + ", " + manga2 + ", " + manga3);
 	             
+	                
 	                fumetteria1.setListaManga(List.of(manga1));
 	                fumetteria2.setListaManga(List.of(manga1, manga2, manga3));
 	                fumetteria3.setListaManga(List.of(manga3));

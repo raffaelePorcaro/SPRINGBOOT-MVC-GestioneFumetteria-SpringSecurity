@@ -22,10 +22,11 @@ public class Fumetteria {
 	private String citta;
 	
 	
-	@ManyToMany(mappedBy= "fumetterie",fetch = FetchType.EAGER)
+	@ManyToMany(mappedBy= "fumetterie", fetch = FetchType.EAGER)//carico subito tutta la collezione insieme all’oggetto principale
 	List<Manga> listaManga;
 
 
+	
 	public Fumetteria() {}
 
 	

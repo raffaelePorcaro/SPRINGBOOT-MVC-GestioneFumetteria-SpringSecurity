@@ -4,7 +4,7 @@
     <title>Form Manga</title>
 </head>
 <body>
-    <h1>Aggiungi/Modifica Manga</h1>
+    <h1>Modifica Manga</h1>
     <form th:action="@{/mangaSalvato}" th:object="${manga}" method="post">
         <label>Nome:</label>
         <input type="text" th:field="*{nome}" required/><br>

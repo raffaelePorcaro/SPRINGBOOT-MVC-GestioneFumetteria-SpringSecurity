@@ -35,7 +35,7 @@ public class MangaController {
 		        log.info("Recupero la lista dei manga");
 		        List<Manga> listaManga = mangaService.getAllObjects();
 		        modelAndView.addObject("listaManga", listaManga);
-		        modelAndView.setViewName("listaManga"); 
+		        modelAndView.setViewName("listaManga.html"); 
 		        return modelAndView;
 		    }
 	
@@ -75,5 +75,3 @@ public class MangaController {
 	
 		}
 		
-
-	

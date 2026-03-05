@@ -12,6 +12,7 @@ import com.example.demo.repository.FumetteriaRepository;
 @Service
 public class FumetteriaServiceImpl implements InterfacciaService<Fumetteria>{
 
+	
 	@Autowired
 	private FumetteriaRepository fumetteriaRepository;
 
@@ -29,6 +30,7 @@ public class FumetteriaServiceImpl implements InterfacciaService<Fumetteria>{
 		return fumetteria;
 	}
 
+	
 	@Override
 	public void saveObject(Fumetteria object) {
 		fumetteriaRepository.save(object);	
@@ -40,6 +42,5 @@ public class FumetteriaServiceImpl implements InterfacciaService<Fumetteria>{
 		fumetteriaRepository.deleteById(id);	
 		
 	}
-
 
 }
