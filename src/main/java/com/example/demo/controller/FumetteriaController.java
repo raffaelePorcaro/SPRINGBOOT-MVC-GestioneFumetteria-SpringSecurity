@@ -34,7 +34,8 @@
 			    model.addAttribute("listaFumetterie", fumetteriaService.getAllObjects());
 			    return "index";
 			}
-			
+		
+		
 			
 		    @GetMapping("/fumetteriaForm")
 		    public String fumetteriaForm(Model model) {
@@ -59,8 +60,7 @@
 		        logger.info("Fumetteria con id " + id + " eliminata");
 		        return "redirect:/";
 		    }
-		    
-	
+		   
 		    
 		    @GetMapping("/aggiornaFumetteria/{id}")
 		    public String aggiornaFumetteria(@PathVariable(value = "id") int id, Model model) {

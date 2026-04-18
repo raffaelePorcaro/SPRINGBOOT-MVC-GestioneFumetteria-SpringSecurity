@@ -5,13 +5,20 @@
 </head>
 <body>
     <h1>Modifica Manga</h1>
-    <form th:action="@{/mangaSalvato}" th:object="${manga}" method="post">
-        <label>Nome:</label>
-        <input type="text" th:field="*{nome}" required/><br>
-        <label>Prezzo:</label>
-        <input type="number" th:field="*{prezzo}" required/><br>
-        <button type="submit">Salva</button>
-    </form>
+
+	<form th:action="@{/mangaSalvato}" th:object="${manga}" method="post">
+
+	    <input type="hidden"th:name="${_csrf.parameterName}"th:value="${_csrf.token}" />
+
+	    <label>Nome:</label>
+	    <input type="text" th:field="*{nome}" required/><br>
+
+	    <label>Prezzo:</label>
+	    <input type="number" th:field="*{prezzo}" required/><br>
+
+	    <button type="submit">Salva</button>
+	</form>
+	
     <a th:href="@{/}">Torna alla homepage</a>
 </body>
 </html>

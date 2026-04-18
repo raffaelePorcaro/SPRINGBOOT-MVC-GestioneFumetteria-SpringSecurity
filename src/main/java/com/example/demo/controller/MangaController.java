@@ -35,7 +35,7 @@ public class MangaController {
 		        log.info("Recupero la lista dei manga");
 		        List<Manga> listaManga = mangaService.getAllObjects();
 		        modelAndView.addObject("listaManga", listaManga);
-		        modelAndView.setViewName("listaManga.html"); 
+		        modelAndView.setViewName("listaManga"); 
 		        return modelAndView;
 		    }
 	
@@ -56,6 +56,7 @@ public class MangaController {
 		        return "redirect:/";
 		    }
 	
+
 	
 		    @GetMapping("/eliminaManga/{id}")
 		    public String eliminaManga(@PathVariable(value = "id") int id) {
