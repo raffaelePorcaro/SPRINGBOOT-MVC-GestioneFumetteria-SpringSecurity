@@ -32,7 +32,6 @@ public class SecurityConfig {
         return new InMemoryUserDetailsManager(admin, user);
     }
 
-    // 🔐 REGOLE DI ACCESSO
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
